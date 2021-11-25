@@ -13,13 +13,17 @@
 
             >
 
+
+        </activity>
+        <activity android:name=".auth.ConfirmationCode"
+
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".auth.ConfirmationCode" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".auth.SignUp"/>
         <activity android:name=".auth.SignIn"/>
