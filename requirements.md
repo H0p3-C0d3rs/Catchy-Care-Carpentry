@@ -8,7 +8,7 @@
 
 <br>
 
-![schema](schema.png)
+![schema](prep/schema.png)
 
 <br>
 
