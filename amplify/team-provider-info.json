@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cccapp-dev-144448-authRole",
+      "UnauthRoleArn": "arn:aws:iam::026719223254:role/amplify-cccapp-dev-144448-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::026719223254:role/amplify-cccapp-dev-144448-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-cccapp-dev-144448-deployment",
+      "UnauthRoleName": "amplify-cccapp-dev-144448-unauthRole",
+      "StackName": "amplify-cccapp-dev-144448",
+      "StackId": "arn:aws:cloudformation:us-west-2:026719223254:stack/amplify-cccapp-dev-144448/fefa7250-4b91-11ec-8879-025f885d37f1",
+      "AmplifyAppId": "d23aeg4zq3g8ij"
+    },
+    "categories": {
+      "auth": {
+        "cccapp0545e898": {}
+      }
+    }
+  }
+}
