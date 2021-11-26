@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.2"
@@ -12,6 +13,7 @@ buildscript {
 
         // Add this line into `dependencies` in `buildscript`
         classpath 'com.amplifyframework:amplify-tools-gradle-plugin:1.0.2'
+        classpath 'com.google.gms:google-services:4.3.10'
     }
 }
 
@@ -19,6 +21,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         maven { url 'https://jitpack.io' }
     }
 }

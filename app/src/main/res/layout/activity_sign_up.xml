@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/nice_yellow"
+    android:background="@color/darckblue"
     tools:context=".auth.SignUp">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Welcome!"
-        android:textColor="@color/darckblue"
+        android:textColor="@color/nice_yellow"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,15 +29,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="76dp"
         android:text="SignUp to get an account."
-        android:textColor="@color/darckblue"
+        android:textColor="@color/nice_yellow"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="345dp"
-        android:layout_height="480dp"
+        android:layout_width="364dp"
+        android:layout_height="469dp"
         android:background="@drawable/vie_sign"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -233,7 +233,7 @@
         android:layout_marginBottom="28dp"
         android:shadowColor="#1C89BA"
         android:text="Log In"
-        android:textColor="@color/darckblue"
+        android:textColor="@color/nice_yellow"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -245,7 +245,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="79dp"
-android:backgroundTint="@color/darckblue"
+android:backgroundTint="@color/nice_yellow"
         android:layout_height="79dp"
         android:src="@android:drawable/ic_menu_camera"
 
