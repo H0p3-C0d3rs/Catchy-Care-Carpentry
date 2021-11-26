@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchyCareCarpentry">
-        <activity android:name=".ui.Dashboard"></activity>
+        <activity android:name=".ui.Dashboard" />
         <activity android:name=".ui.Details" />
         <activity android:name=".ui.AskForService" />
         <activity android:name=".ui.AddFurniture" />
@@ -17,7 +17,8 @@
         <activity android:name=".ui.ContactUs" />
         <activity android:name=".auth.Profile" />
         <activity android:name=".ui.MainScreen" />
-        <activity android:name=".intros.OnBoardingActivity">
+        <activity android:name=".intros.OnBoardingActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
