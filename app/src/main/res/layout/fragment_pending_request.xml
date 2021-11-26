@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+    tools:context=".fragments.PendingRequestFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewId222"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recyclerview_components"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/pendingName"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="Name"
+                android:textColor="#042C5A"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pendingDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:text="Description"
+                android:textColor="#042C5A"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pendingName" />
+
+            <TextView
+                android:id="@+id/pendingPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:paddingStart="20dp"
+                android:paddingBottom="10dp"
+                android:text="Phone"
+                android:textColor="#042C5A"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pendingDescription" />
+
+            <TextView
+                android:id="@+id/pendingLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pendingPhone" />
+
+            <Button
+                android:id="@+id/UpdateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/void_button_pg"
+                android:textColor="#042C5A"
+                android:text="Accept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
