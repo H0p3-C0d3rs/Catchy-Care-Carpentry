@@ -43,5 +43,11 @@
         ]
       }
     }
+  },
+  "storage": {
+    "cccApp": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

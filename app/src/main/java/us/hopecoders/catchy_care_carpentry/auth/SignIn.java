@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.amplifyframework.core.Amplify;
 
-import us.hopecoders.catchy_care_carpentry.MainActivity;
 import us.hopecoders.catchy_care_carpentry.R;
 
 public class SignIn extends AppCompatActivity {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".auth.ConfirmationCode"
-    android:background="@drawable/background2"
+    android:background="@color/darckblue"
     >
 
     <TextView
@@ -23,15 +23,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="364dp"
+        android:layout_height="469dp"
+        android:background="@drawable/vie_sign"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".78"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.583">
 
         <Button
             android:id="@+id/confirmButton"
@@ -47,11 +48,11 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/confirmationInput"
-            app:layout_constraintVertical_bias="0.358" />
+            app:layout_constraintVertical_bias="0.494" />
 
         <EditText
             android:id="@+id/usernameConfirm"
-            android:layout_width="375dp"
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="140dp"
             android:background="@drawable/input_pg"
@@ -73,9 +74,11 @@
 
         <EditText
             android:id="@+id/confirmationInput"
-            android:layout_width="375dp"
+
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:background="@drawable/input_pg"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
             android:ems="10"
             android:hint="Confirm code"
             android:inputType="textPersonName"
@@ -91,6 +94,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/usernameConfirm"
             app:layout_constraintVertical_bias="0.078" />
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="87dp"
+            android:src="@drawable/ic_baseline_email_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.075" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
