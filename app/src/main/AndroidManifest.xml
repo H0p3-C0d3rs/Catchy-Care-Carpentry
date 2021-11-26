@@ -37,6 +37,12 @@
         <activity android:name=".auth.ConfirmationCode" />
         <activity android:name=".auth.SignUp" />
         <activity android:name=".auth.SignIn" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value='${MAPS_API_KEY}' />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3747564237941228~2335263301"/>
     </application>
 
 </manifest>
