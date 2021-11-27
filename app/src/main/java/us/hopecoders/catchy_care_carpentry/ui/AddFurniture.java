@@ -31,7 +31,7 @@ import us.hopecoders.catchy_care_carpentry.auth.Profile;
 
 public class AddFurniture extends AppCompatActivity {
 
-    private String carType;
+    private String furType;
     private String model;
     private String woodType;
     private User user;
@@ -41,7 +41,7 @@ public class AddFurniture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_furnuture);
 
-        // // // // // // // // // Get Cars List // // // // // // // // // // // // // //
+        // // // // // // // // // Get furniture's List // // // // // // // // // // // // // //
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(AddFurniture.this);
         String userId = sharedPreferences.getString("userId", "");
         Amplify.API.query(
@@ -51,10 +51,10 @@ public class AddFurniture extends AppCompatActivity {
                         @Override
                         public void run() {
                             user = response.getData();
-                            List<Furnuture> carList = response.getData().getFurnuture();
+                            List<Furnuture> furList = response.getData().getFurnuture();
                             RecyclerView addFurRecyclerView = findViewById(R.id.addFurRecycler);
                             addFurRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                            addFurRecyclerView.setAdapter(new FurnitureAdapter(carList));
+                            addFurRecyclerView.setAdapter(new FurnitureAdapter(furList));
                         }
                     });
                 },
@@ -62,22 +62,22 @@ public class AddFurniture extends AppCompatActivity {
         );
 
         // // // // // // // // // Get views and text // // // // // // // // // // // // // //
-        EditText editTextCarModel = findViewById(R.id.editTextWoodModel);
-        EditText editTextCarType = findViewById(R.id.editTextWoodType);
+        EditText editTextFurModel = findViewById(R.id.editTextWoodModel);
+        EditText editTextFurType = findViewById(R.id.editTextWoodType);
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
 
-        // // // // // // // // // add car listener // // // // // // // // // // // // // //
+        // // // // // // // // // add furniture's listener // // // // // // // // // // // // // //
         Button addFur = findViewById(R.id.addFur);
         addFur.setOnClickListener(view -> {
-            carType = editTextCarType.getText().toString();
-            model = editTextCarModel.getText().toString();
+            furType = editTextFurType.getText().toString();
+            model = editTextFurModel.getText().toString();
             int chosenGasolineType = radioGroup.getCheckedRadioButtonId();
             RadioButton chosenButton = findViewById(chosenGasolineType);
 
-            if (chosenButton != null && !carType.equals("") && !model.equals("")) {
+            if (chosenButton != null && !furType.equals("") && !model.equals("")) {
                 woodType = chosenButton.getText().toString();
-                addFur(carType, model, woodType);
+                addFur(furType, model, woodType);
             } else {
                 handler2();
             }
@@ -92,20 +92,20 @@ public class AddFurniture extends AppCompatActivity {
 
     }
 
-    // // // // // // // // // method to save car in could // // // // // // // // // // // // // //
-    private void addFur(String carType, String carModel, String woodType) {
+    // // // // // // // // // method to save furniture's in could // // // // // // // // // // // // // //
+    private void addFur(String furType, String furModel, String woodType) {
 
-        Furnuture car = Furnuture.builder()
-                .type(carType)
-                .model(carModel)
+        Furnuture fur = Furnuture.builder()
+                .type(furType)
+                .model(furModel)
                 .woodType(woodType)
                 .user(user)
                 .build();
 
         Amplify.API.mutate(
-                ModelMutation.create(car),
+                ModelMutation.create(fur),
                 response2 -> {
-                    Log.i("MyAmplifyApp", "Added car with id: " + response2.getData().getId());
+                    Log.i("MyAmplifyApp", "Added furniture's with id: " + response2.getData().getId());
                     handler1();
                     finish();
                     startActivity(getIntent());

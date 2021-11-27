@@ -63,7 +63,6 @@ dependencies {
     //
     //s3
     implementation 'com.amplifyframework:aws-storage-s3:1.28.3'
-    implementation 'com.amplifyframework:aws-auth-cognito:1.28.3'
     //
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
     // shapes
@@ -84,7 +83,6 @@ dependencies {
     implementation 'com.amplifyframework:aws-datastore:1.24.0'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
     // Cognito
-    implementation 'com.amplifyframework:aws-auth-cognito:1.24.0'
     // end here
 // initialize Amplify
     // Amplify core dependency
@@ -118,7 +116,6 @@ dependencies {
     implementation 'com.amplifyframework:aws-auth-cognito:1.28.3'
 
     implementation 'com.amplifyframework:aws-storage-s3:1.28.3'
-    implementation 'com.amplifyframework:aws-auth-cognito:1.28.3'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 

@@ -100,9 +100,9 @@ public class AskForService extends AppCompatActivity {
                         @Override
                         public void run() {
                             List<Furnuture> furnitureList = user.getFurnuture();
-                            RecyclerView carRecyclerView = findViewById(R.id.furRecycler);
-                            carRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                            carRecyclerView.setAdapter(new FurnitureAdapter(furnitureList));
+                            RecyclerView furRecyclerView = findViewById(R.id.furRecycler);
+                            furRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                            furRecyclerView.setAdapter(new FurnitureAdapter(furnitureList));
                         }
                     });
                 },
@@ -132,7 +132,7 @@ public class AskForService extends AppCompatActivity {
                     Amplify.API.query(
                             ModelQuery.get(Furnuture.class, furId),
                             response -> {
-                                Log.i("Car ================ ", response.getData().getId());
+                                Log.i("Furni ================ ", response.getData().getId());
                                 furnuture = response.getData();
                                 saveTheDataInTheCloud();
                             },

@@ -55,11 +55,11 @@ public class Details extends AppCompatActivity implements OnMapReadyCallback {
         TextView phoneView = findViewById(R.id.phoneView);
         phoneView.setText("Phone Number: " + intent.getExtras().getString("phone"));
 
-        TextView carTypeView = findViewById(R.id.carTypeView);
-        carTypeView.setText("Car Type: " + intent.getExtras().getString("carType"));
+        TextView furTypeView = findViewById(R.id.furTypeView);
+        furTypeView.setText("fur Type: " + intent.getExtras().getString("woodType"));
 
-        TextView carModelView = findViewById(R.id.carModelView);
-        carModelView.setText("Car Model: " + intent.getExtras().getString("carModel"));
+        TextView furModelView = findViewById(R.id.furModelView);
+        furModelView.setText("fur Model: " + intent.getExtras().getString("woodModel"));
 
         TextView gasolineView = findViewById(R.id.gasolineView);
         gasolineView.setText("Gasoline Type: " + intent.getExtras().getString("gasoline"));
