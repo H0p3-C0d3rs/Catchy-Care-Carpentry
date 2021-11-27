@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchyCareCarpentry">
-        <activity android:name=".ui.Dashboard" />
+        <activity android:name=".ui.Dashboard"/>
         <activity android:name=".ui.Details" />
         <activity android:name=".ui.AskForService" />
         <activity android:name=".ui.AddFurniture" />

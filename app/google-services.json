@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762342133552",
+    "project_id": "catchycarecarpentry",
+    "storage_bucket": "catchycarecarpentry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762342133552:android:a5d78fb947c15ecb9c82f5",
+        "android_client_info": {
+          "package_name": "us.hopecoders.catchy_care_carpentry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762342133552-cfq7gp97npg0e1rili1me7lo4scoqbg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGu5Ayvfw6HItdOtFZg-R6hE9vvn5xeF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762342133552-cfq7gp97npg0e1rili1me7lo4scoqbg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
