@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.amplifyframework.core.Amplify;
 
 import us.hopecoders.catchy_care_carpentry.R;
+import us.hopecoders.catchy_care_carpentry.ui.Dashboard;
 import us.hopecoders.catchy_care_carpentry.ui.MainScreen;
 
 public class SignIn extends AppCompatActivity {
@@ -38,8 +39,8 @@ public class SignIn extends AppCompatActivity {
                     if (result.isSignInComplete()) {
                         handler1();
                         if (username.getText().toString().equals("admin2")){
-//                            Intent goToDashBoard = new Intent(SignIn.this, Dashboard.class);
-//                            startActivity(goToDashBoard);
+                            Intent goToDashBoard = new Intent(SignIn.this, Dashboard.class);
+                            startActivity(goToDashBoard);
                         } else {
                             Intent goToMain = new Intent(SignIn.this, MainScreen.class);
                             startActivity(goToMain);

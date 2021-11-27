@@ -5,13 +5,20 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.Service;
+import com.amplifyframework.datastore.generated.model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import us.hopecoders.catchy_care_carpentry.R;
+import us.hopecoders.catchy_care_carpentry.auth.ConfirmationCode;
 import us.hopecoders.catchy_care_carpentry.auth.Profile;
+import us.hopecoders.catchy_care_carpentry.auth.SignUp;
 
 public class OurServices extends AppCompatActivity {
 
@@ -54,9 +61,25 @@ public class OurServices extends AppCompatActivity {
         });
 
 //************************************************ End BottomNavigationView ********************************************
-
+//saveServices("broken wood");
     }
+    public void saveServices(String name){
 
+        // save to dynamoDp
+        Service service =
+                Service.builder()
+                .name(name)
+                .build();
+                    
+                               System.out.println("this is user data ==> "+service);
+        Amplify.API.mutate(
+                ModelMutation.create(service),
+                response2 -> {
+                    Log.i("MyAmplifyApp", "Added user with id: " + response2.getData().getId());
+                },
+                error -> Log.e("MyAmplifyApp", "Create failed", error)
+        );
+    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -104,7 +127,7 @@ public class OurServices extends AppCompatActivity {
         CardView card1 = findViewById(R.id.card1);
         card1.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "20aae290-be18-47bc-b6b8-a16909bf3898");
+            goToAskForService.putExtra("serviceId", "b9f3e498-3bb0-4181-ab57-b83ad2728ab5");
             startActivity(goToAskForService);
         });
 

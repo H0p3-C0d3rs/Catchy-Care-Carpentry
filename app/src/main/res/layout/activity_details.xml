@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="35sp"
             android:gravity="center"
-            android:text="🚘 Car Detail"
+            android:text="🚘 fur Detail"
             android:textColor="#E6E6E6"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,28 +108,28 @@
 
 
         <TextView
-            android:id="@+id/carTypeView"
+            android:id="@+id/furTypeView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="Car Type"
+            android:text="fur Type"
             android:textColor="#E6E6E6"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
-            android:id="@+id/carModelView"
+            android:id="@+id/furModelView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="car Model"
+            android:text="fur Model"
             android:textColor="#E6E6E6"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/carTypeView" />
+            app:layout_constraintTop_toBottomOf="@+id/furTypeView" />
 
         <TextView
             android:id="@+id/gasolineView"
@@ -141,7 +141,7 @@
             android:textColor="#E6E6E6"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/carModelView" />
+            app:layout_constraintTop_toBottomOf="@+id/furModelView" />
 
         <TextView
             android:id="@+id/textView8"
@@ -181,22 +181,22 @@
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cityNameView" />
-<!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
 
         <fragment
             android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="0dp"
-            android:layout_height="319dp"
+            android:layout_height="297dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/countryNameView"
-            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_bias="1.0"
             tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
 
 

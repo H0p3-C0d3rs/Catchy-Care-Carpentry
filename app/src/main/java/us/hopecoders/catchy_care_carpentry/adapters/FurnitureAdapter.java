@@ -39,15 +39,16 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurV
 
     public static class FurViewHolder extends RecyclerView.ViewHolder {
         public Furnuture furnuture;
+
         View itemView;
 
         public FurViewHolder(@NonNull View itemView) {
             super(itemView);
             this.itemView = itemView;
 
-            TextView carDeleteButton =itemView.findViewById(R.id.DeleteButton);
+            TextView furDeleteButton =itemView.findViewById(R.id.DeleteButton);
 
-            carDeleteButton.setOnClickListener((v)->{
+            furDeleteButton.setOnClickListener((v)->{
                 Amplify.API.mutate(ModelMutation.delete(furnuture),
                         result -> {
                             Log.i("MyAmplifyApp", "Todo with id: " + result.getData().getId());
@@ -63,7 +64,7 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurV
                 itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(view.getContext());
                 SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-                sharedPreferencesEditor.putString("carId", furnuture.getId());
+                sharedPreferencesEditor.putString("furId", furnuture.getId());
                 Toast.makeText(itemView.getContext(),  furnuture.getType()+ "-" +furnuture.getModel()+" Selected Successfully!", Toast.LENGTH_LONG).show();
                 sharedPreferencesEditor.apply();
                 itemView.postDelayed(new Runnable() {
