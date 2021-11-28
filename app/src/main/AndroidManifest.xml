@@ -27,7 +27,8 @@
         <activity android:name=".ui.ContactUs" />
         <activity android:name=".auth.Profile" />
         <activity android:name=".ui.MainScreen" />
-        <activity android:name=".intros.OnBoardingActivity">
+        <activity android:name=".intros.OnBoardingActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
