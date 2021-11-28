@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".intros.FragmentC"
-    android:background="@color/Green_Vogue"
+    android:background="@color/white"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="144dp"
             android:src="@drawable/circle_blank"
-            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,67 +56,55 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="170dp"
-            android:layout_marginBottom="236dp"
-            android:src="@drawable/cartoon"
-            app:layout_constraintBottom_toTopOf="@+id/finish"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="448dp"
-            android:layout_marginEnd="256dp"
-            android:text="Title"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mail"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-68dp" />
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="480dp"
-            android:layout_marginEnd="148dp"
-            android:text="Description"
+            android:layout_width="356dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="532dp"
+            android:layout_marginEnd="16dp"
+            android:text="For cooperation and advertising -
+info@tvoytseh.ru"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/description2"
-            android:layout_width="296dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="520dp"
-            android:layout_marginEnd="8dp"
-            android:text="more more more Description just a dummy text "
+            android:layout_width="353dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="28dp"
+            android:textStyle="bold"
+            android:text="We will be happy to hold a meeting at your facility or in our office, advise on all issues and select the best solution. "
+            android:textColor="@color/black"
             android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/finish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="31dp"
-            android:text="finish"
+            android:layout_width="86dp"
+            android:layout_height="38dp"
+            android:text="Finish"
             android:textColor="@color/black"
             android:textSize="24dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gifImageView3"
+            app:layout_constraintVertical_bias="0.922" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
