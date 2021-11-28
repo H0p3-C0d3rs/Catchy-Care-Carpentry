@@ -69,7 +69,7 @@
             android:id="@+id/woodTypeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wood type"
+            android:text="Furniture Type"
             android:textColor="#042C5A"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,24 +85,24 @@
             app:layout_constraintTop_toBottomOf="@+id/chooseTeamTextView">
 
             <RadioButton
-                android:id="@+id/Octane90"
+                android:id="@+id/Softwoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Octane-90" />
+                android:text="Soft woods" />
 
             <RadioButton
-                android:id="@+id/Octane95"
+                android:id="@+id/Hardwoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Octane-95" />
+                android:text="Hard woods" />
 
             <RadioButton
-                android:id="@+id/diesel"
+                android:id="@+id/EngineeredWood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Diesel" />
+                android:text="Engineered Wood" />
 
         </RadioGroup>
 
@@ -111,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
-            android:text="model"
+            android:text="Quantity"
             android:textColor="#042C5A"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
