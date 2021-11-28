@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".intros.FragmentB"
-    android:background="@color/BabyBlue"
+
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,49 +56,40 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="422dp"
+            android:layout_height="258dp"
             android:layout_marginBottom="299dp"
-            android:src="@drawable/cartoon"
+            android:src="@drawable/dashboard3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="448dp"
-            android:layout_marginEnd="256dp"
-            android:text="Title"
+            android:id="@+id/description"
+            android:layout_width="384dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="412dp"
+            android:layout_marginEnd="12dp"
+            android:text="WE MAKE FURNITURE OF ANY COMPLEXITY"
+            android:textColor="@color/black"
             android:textSize="24dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="480dp"
-            android:layout_marginEnd="148dp"
-            android:text="Description"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/description2"
-            android:layout_width="296dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="520dp"
-            android:layout_marginEnd="8dp"
-            android:text="more more more Description just a dummy text "
+            android:layout_width="377dp"
+            android:layout_height="162dp"
+            android:layout_marginTop="472dp"
+            android:layout_marginEnd="16dp"
+            android:text="Built-in wardrobes and wardrobes, hanging and stationary cabinets, shelving, countertops, window sills, wooden partitions and slats, doors, stairs, tables, non-standard interior structures made of wood and metal, kitchens of your dreams with individual design of filling."
+            android:textColor="@color/black"
             android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
