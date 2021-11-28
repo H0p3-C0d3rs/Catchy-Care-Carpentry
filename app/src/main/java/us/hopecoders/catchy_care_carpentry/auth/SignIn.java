@@ -38,7 +38,8 @@ public class SignIn extends AppCompatActivity {
                     Log.i("AuthQuickstart", result.isSignInComplete() ? "Sign in succeeded" : "Sign in not complete");
                     if (result.isSignInComplete()) {
                         handler1();
-                        if (username.getText().toString().equals("admin2")){
+                        System.out.println(username);
+                        if (username.getText().toString().equals("severus_snape")){
                             Intent goToDashBoard = new Intent(SignIn.this, Dashboard.class);
                             startActivity(goToDashBoard);
                         } else {

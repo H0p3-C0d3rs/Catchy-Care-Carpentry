@@ -61,7 +61,13 @@ public class OurServices extends AppCompatActivity {
         });
 
 //************************************************ End BottomNavigationView ********************************************
-//saveServices("broken wood");
+//saveServices("Assembly");
+//        saveServices("Installation");
+//        saveServices("Painting");
+//        saveServices("Remodeling");
+//        saveServices("upholstery");
+//        saveServices("other");
+
     }
     public void saveServices(String name){
 
@@ -83,86 +89,45 @@ public class OurServices extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-//        List<Service > servicesList=new ArrayList<>();
-//
-//        Amplify.API.query(
-//                ModelQuery.list(Service.class),
-//                response -> {
-//                    Log.i("serviseResponse",response.getData().toString());
-//                    for (Service service : response.getData()) {
-//                        servicesList.add(service);
-//
-//                    }
-//
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    TextView textView1=findViewById(R.id.service1);
-//                    textView1.setText(servicesList.get(0).getName());
-//
-//                    TextView textView2=findViewById(R.id.service2);
-//                    textView2.setText(servicesList.get(1).getName());
-//
-//                    TextView textView3=findViewById(R.id.service3);
-//                    textView3.setText(servicesList.get(2).getName());
-//
-//                    TextView textView4=findViewById(R.id.service4);
-//                    textView4.setText(servicesList.get(3).getName());
-//
-//                    TextView textView5=findViewById(R.id.service5);
-//                    textView5.setText(servicesList.get(4).getName());
-//
-//                    TextView textView6=findViewById(R.id.service6);
-//                    textView6.setText(servicesList.get(5).getName());
-//                }
-//            });
-//
-//
-//                    Log.i("MyAmplifyApp", "outside the loop");
-//                },
-//                error -> Log.e("MyAmplifyApp", "Query failure", error)
-//        );
-
         CardView card1 = findViewById(R.id.card1);
         card1.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "b9f3e498-3bb0-4181-ab57-b83ad2728ab5");
+            goToAskForService.putExtra("serviceId", "3e8e3f13-4f84-4164-99d2-f8b273e5469d");
             startActivity(goToAskForService);
         });
 
         CardView card2 = findViewById(R.id.card2);
         card2.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "f8a2d3f3-2e01-48d3-992e-614cca5cdea4");
+            goToAskForService.putExtra("serviceId", "e0da5b85-b0ea-476e-8ac3-7ad3af1ccb77");
             startActivity(goToAskForService);
         });
 
         CardView card3 = findViewById(R.id.card3);
         card3.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "5ccb2369-fd80-451d-96b0-7bfe6da99d76");
+            goToAskForService.putExtra("serviceId", "89285462-2593-4c47-acf1-5e45aa3d3397");
             startActivity(goToAskForService);
         });
 
         CardView card4 = findViewById(R.id.card4);
         card4.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "6a010c27-6b37-4093-9e64-4c87bdbea800");
+            goToAskForService.putExtra("serviceId", "c4cfab45-82af-4569-9328-2b61ad8726be");
             startActivity(goToAskForService);
         });
 
         CardView card5 = findViewById(R.id.card5);
         card5.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "1f111de1-cbba-44ab-bb13-28aa25fd6be9");
+            goToAskForService.putExtra("serviceId", "714a7aee-171a-4fbf-bb1a-eae04a3546c3");
             startActivity(goToAskForService);
         });
 
         CardView card6 = findViewById(R.id.card6);
         card6.setOnClickListener(view -> {
             Intent goToAskForService = new Intent(OurServices.this, AskForService.class);
-            goToAskForService.putExtra("serviceId", "5adf8736-04a6-4978-86d8-4186a6a3ae8a");
+            goToAskForService.putExtra("serviceId", "56b10031-ef50-439d-9a30-ab50487c0452");
             startActivity(goToAskForService);
         });
 

@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="DarkGray">#212529</color>
-    <color name="BabyBlue">#5093E2</color>
+    <color name="BabyBlue">#FF000000</color>
     <color name="Pink">#A43F49</color>
     <color name="Mystic">#e2eaed</color>
     <color name="grey">#808080</color>
@@ -24,5 +24,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#F3954F</color>
     <color name="baby_green">#6BC6A5</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="textInputLayout">#96ffffff</color>
 
 </resources>

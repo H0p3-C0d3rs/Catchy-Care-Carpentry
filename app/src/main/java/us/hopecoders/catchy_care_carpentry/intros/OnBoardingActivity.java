@@ -20,18 +20,20 @@ import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.auth.SignUp;
 
 public class OnBoardingActivity extends AppCompatActivity {
-LiquidPager pager;
-OnBoardAdapter viewPager;
+    LiquidPager pager;
+    OnBoardAdapter viewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding);
-        pager=findViewById(R.id.pager);
-        viewPager=new OnBoardAdapter(getSupportFragmentManager(),1);
+        pager = findViewById(R.id.pager);
+        viewPager = new OnBoardAdapter(getSupportFragmentManager(), 1);
         pager.setAdapter(viewPager);
         configureAmplify();
     }
-    public void configureAmplify(){
+
+    public void configureAmplify() {
         try {
 
             Amplify.addPlugin(new AWSApiPlugin());
