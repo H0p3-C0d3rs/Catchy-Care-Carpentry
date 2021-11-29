@@ -29,6 +29,9 @@ public class SignIn extends AppCompatActivity {
         EditText username = findViewById(R.id.usernameSignin);
         EditText password = findViewById(R.id.passwordSignin);
         Button signin = findViewById(R.id.signinButton);
+//        signin.setAlpha(0f);
+//        signin.setTranslationY(50);
+//        signin.animate().alpha(1f).translationYBy(-50).setDuration(1500);
         TextView goToSignUp = findViewById(R.id.signUpInSignIn);
 
         signin.setOnClickListener(v -> Amplify.Auth.signIn(

@@ -120,6 +120,14 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        Button button = findViewById(R.id.projectsId);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreen.this,Carousel.class);
+                startActivity(intent);
+            }
+        });
 
 
 
