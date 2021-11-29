@@ -19,9 +19,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchyCareCarpentry">
         <activity
-            android:name=".ui.Carousel"
-            android:exported="false" />
-        <activity android:name=".ui.Dashboard" />
+            android:name=".splash.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".ui.Dashboard" />
         <activity android:name=".ui.Details" />
         <activity android:name=".ui.AskForService" />
         <activity android:name=".ui.AddFurniture" />
@@ -32,11 +40,7 @@
         <activity
             android:name=".intros.OnBoardingActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".auth.ConfirmationCode" />
         <activity android:name=".auth.SignUp" />
