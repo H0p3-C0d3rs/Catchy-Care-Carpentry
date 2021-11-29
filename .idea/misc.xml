@@ -28,19 +28,24 @@
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/font/cherry_swash.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_add_furnuture.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_ask_for_service.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_confirmation_code.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_carousel.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_carousel2.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_confirmation_code.xml" value="0.264" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_contact_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_content.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_dashboard.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_main_screen.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_main_screen.xml" value="0.264" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_on_boarding.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_our_services.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_a.xml" value="0.2" />
-        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_b.xml" value="0.1" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_b.xml" value="0.25" />
         <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_c.xml" value="0.2" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_furniture.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STUDENT/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/xml/activity_dribble_profile_scene.xml" value="0.23854166666666668" />
       </map>
     </option>
   </component>
