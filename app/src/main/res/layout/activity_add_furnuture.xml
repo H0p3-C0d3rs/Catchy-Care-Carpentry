@@ -4,55 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/images"
     tools:context=".ui.AddFurniture">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:background="@drawable/addcar_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/addFurRecycler"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/bangers"
             android:text="YOUR Fix"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addFurRecycler"
+        android:layout_width="388dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.508">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59">
 
         <EditText
             android:id="@+id/editTextWoodModel"
@@ -70,7 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Furniture Type"
-            android:textColor="#042C5A"
+            android:textColor="@color/black"
+            android:fontFamily="@font/amaranth"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -79,8 +74,8 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="52dp"
             app:layout_constraintStart_toEndOf="@+id/editTextWoodModel"
             app:layout_constraintTop_toBottomOf="@+id/chooseTeamTextView">
 
@@ -88,21 +83,26 @@
                 android:id="@+id/Softwoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Soft woods" />
+                android:text="Soft woods"
+                android:textStyle="bold"/>
 
             <RadioButton
                 android:id="@+id/Hardwoods"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Hard woods" />
+                android:text="Hard woods"
+
+                android:textStyle="bold"/>
 
             <RadioButton
                 android:id="@+id/EngineeredWood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Engineered Wood" />
+                android:text="Engineered Wood"
+
+                android:textStyle="bold" />
 
         </RadioGroup>
 
@@ -112,8 +112,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:text="Quantity"
-            android:textColor="#042C5A"
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:fontFamily="@font/amaranth"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextWoodType" />
 
@@ -122,8 +124,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:text="Choose a team"
-            android:textColor="#042C5A"
+            android:text="Wood Type"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+
             app:layout_constraintStart_toEndOf="@+id/editTextWoodType"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,29 +143,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/woodTypeTextView" />
 
-        <Button
-            android:id="@+id/buttonGoProfile"
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="104dp"
-            android:background="@drawable/void_button_pg"
-            android:text="Profile"
-            android:textColor="#042C5A"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-        <Button
-            android:id="@+id/addFur"
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="70dp"
-            android:background="@drawable/button_background_white"
-            android:text="Add"
-            android:textColor="#042C5A"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextWoodModel" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/buttonGoProfile"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/void_button_pg"
+        android:text="Profile"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
+    <Button
+        android:id="@+id/addFur"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/botton_pg"
+        android:text="Add"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGoProfile"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 </androidx.constraintlayout.widget.ConstraintLayout>
