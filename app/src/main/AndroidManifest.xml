@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -18,8 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchyCareCarpentry">
-
-        <activity android:name=".ui.Dashboard"></activity>
+        <activity
+            android:name=".ui.Carousel"
+            android:exported="false" />
+        <activity android:name=".ui.Dashboard" />
         <activity android:name=".ui.Details" />
         <activity android:name=".ui.AskForService" />
         <activity android:name=".ui.AddFurniture" />
@@ -27,7 +29,8 @@
         <activity android:name=".ui.ContactUs" />
         <activity android:name=".auth.Profile" />
         <activity android:name=".ui.MainScreen" />
-        <activity android:name=".intros.OnBoardingActivity"
+        <activity
+            android:name=".intros.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,12 +41,13 @@
         <activity android:name=".auth.ConfirmationCode" />
         <activity android:name=".auth.SignUp" />
         <activity android:name=".auth.SignIn" />
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value='${MAPS_API_KEY}' />
+            android:value="${MAPS_API_KEY}" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3747564237941228~2335263301"/>
+            android:value="ca-app-pub-3747564237941228~2335263301" />
     </application>
 
 </manifest>

@@ -22,6 +22,12 @@ public class ConfirmationCode extends AppCompatActivity {
         EditText usernameConfirm = findViewById(R.id.usernameConfirm);
         Button confirmButton = findViewById(R.id.confirmButton);
 
+
+        confirmButton.animate().rotationY(360).setDuration(3000);
+
+
+
+
         confirmButton.setOnClickListener(v -> {
             Amplify.Auth.confirmSignUp(
                     usernameConfirm.getText().toString(),
