@@ -18,10 +18,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CatchyCareCarpentry">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/actions" />
-
         <activity
             android:name=".splash.Splash"
             android:exported="true">

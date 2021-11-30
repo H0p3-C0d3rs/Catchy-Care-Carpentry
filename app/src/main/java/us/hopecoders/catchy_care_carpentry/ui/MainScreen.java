@@ -119,10 +119,6 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(goToContactUsMains);
             }
         });
-
-
-
-
     }
 }
 

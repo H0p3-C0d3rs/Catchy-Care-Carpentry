@@ -23,6 +23,8 @@ public class Splash extends AppCompatActivity {
             startActivity(new Intent(Splash.this, OnBoardingActivity.class));
             // close this activity
             finish();
-        }, 1000); // pause the launch of the dashboard for 3 seconds
+
+        }, 6000); // pause the launch of the dashboard for 3 seconds
+
     }
 }
