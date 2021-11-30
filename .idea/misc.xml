@@ -3,9 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/drawable/layout_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/drawable/requests_profile_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/font/alfa_slab_one.xml" value="0.284375" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/font/almendra_sc.xml" value="0.284375" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_confirmation_code.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_contact_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_main_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_on_boarding.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_our_services.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_a.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_requests_in_profile.xml" value="0.1" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_furniture.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_pending_request.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/LTUC/AndroidStudioProjects/Catchy-Care-Carpentry/app/src/main/res/layout/fragment_requests_in_profile.xml" value="0.264" />
       </map>
     </option>
   </component>
