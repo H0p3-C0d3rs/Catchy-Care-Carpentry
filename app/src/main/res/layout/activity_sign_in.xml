@@ -68,7 +68,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="225dp"
+        android:background="#96454545"
         android:orientation="vertical"
         android:paddingLeft="32dp"
         android:paddingRight="32dp">
@@ -84,14 +85,14 @@
                 android:id="@+id/usernameSignin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:drawableEnd="@drawable/ic_baseline_person_24"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
-                android:drawableEnd="@drawable/ic_baseline_person_24"
                 android:hint="Username"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -104,14 +105,14 @@
                 android:id="@+id/passwordSignin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawablePadding="16dp"
                 android:drawableEnd="@drawable/ic_lock_white_24dp"
+                android:drawablePadding="16dp"
                 android:fontFamily="@font/calibri"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
@@ -131,9 +132,9 @@
                 android:fontFamily="@font/calibri"
                 android:text="Sign up"
                 android:textAllCaps="false"
-                android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/signinButton"
@@ -145,14 +146,11 @@
                 android:text="Sign in"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
