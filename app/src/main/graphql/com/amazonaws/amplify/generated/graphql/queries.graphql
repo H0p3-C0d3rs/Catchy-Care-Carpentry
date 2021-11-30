@@ -1,0 +1,442 @@
+# this is an auto generated file. This will be overwritten
+query SyncFurnutures(
+  $filter: ModelFurnutureFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncFurnutures(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetFurnuture($id: ID!) {
+  getFurnuture(id: $id) {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListFurnutures(
+  $filter: ModelFurnutureFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFurnutures(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncUsers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncRequests(
+  $filter: ModelRequestFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncRequests(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      description
+      phone
+      isTaken
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetRequest($id: ID!) {
+  getRequest(id: $id) {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListRequests(
+  $filter: ModelRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listRequests(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      phone
+      isTaken
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncOurLocations(
+  $filter: ModelOurLocationFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncOurLocations(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetOurLocation($id: ID!) {
+  getOurLocation(id: $id) {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListOurLocations(
+  $filter: ModelOurLocationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listOurLocations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncServices(
+  $filter: ModelServiceFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncServices(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetService($id: ID!) {
+  getService(id: $id) {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListServices(
+  $filter: ModelServiceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listServices(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncDashbords(
+  $filter: ModelDashbordFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncDashbords(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      imageUrl
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetDashbord($id: ID!) {
+  getDashbord(id: $id) {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+query ListDashbords(
+  $filter: ModelDashbordFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDashbords(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      imageUrl
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    nextToken
+    startedAt
+  }
+}

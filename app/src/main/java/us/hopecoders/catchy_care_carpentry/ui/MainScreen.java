@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import com.amplifyframework.AmplifyException;
+import com.amplifyframework.analytics.AnalyticsEvent;
 import com.amplifyframework.api.aws.AWSApiPlugin;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.auth.AuthUser;
@@ -35,7 +36,16 @@ public class MainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-
+/********************Analytics**********************/
+//        AnalyticsEvent event = AnalyticsEvent.builder()
+//                .name("PasswordReset")
+//                .addProperty("Channel", "SMS")
+//                .addProperty("Successful", true)
+//                .addProperty("ProcessDuration", 792)
+//                .addProperty("UserAge", 120.3)
+//                .build();
+//
+//        Amplify.Analytics.recordEvent(event);
 
 //************************************************ Start BottomNavigationView ********************************************
 
@@ -46,6 +56,10 @@ public class MainScreen extends AppCompatActivity {
         BottomNavigationItemView homeInMenu = findViewById(R.id.homeInMenu);
         BottomNavigationItemView contactUsInMenu= findViewById(R.id.contactUsInMenu);
         BottomNavigationItemView askForServiceInMenu = findViewById(R.id.askForServiceInMenu);
+        BottomNavigationItemView galleryMenu = findViewById(R.id.gallery);
+        galleryMenu.setOnClickListener((v)->{
+            startActivity(new Intent(getApplicationContext() , Galary.class));
+        });
 
         profileInMenu.setOnClickListener(new View.OnClickListener() {
             @Override

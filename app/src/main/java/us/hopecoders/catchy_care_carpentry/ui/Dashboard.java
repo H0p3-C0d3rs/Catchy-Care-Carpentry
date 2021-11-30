@@ -2,10 +2,17 @@ package us.hopecoders.catchy_care_carpentry.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,14 +31,16 @@ import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.adapters.PendingRequestsAdapter;
 import us.hopecoders.catchy_care_carpentry.auth.SignIn;
 
+
+import com.pusher.pushnotifications.PushNotifications;
+
+
 public class Dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
-
         RecyclerView dashBoardRecycler = findViewById(R.id.dashBoardRecycler);
         Handler handler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
             @Override

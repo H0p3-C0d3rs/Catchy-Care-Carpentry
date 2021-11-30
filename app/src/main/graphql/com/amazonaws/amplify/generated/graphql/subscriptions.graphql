@@ -1,0 +1,454 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateFurnuture {
+  onCreateFurnuture {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateFurnuture {
+  onUpdateFurnuture {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteFurnuture {
+  onDeleteFurnuture {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateUser {
+  onCreateUser {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateUser {
+  onUpdateUser {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteUser {
+  onDeleteUser {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateRequest {
+  onCreateRequest {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateRequest {
+  onUpdateRequest {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteRequest {
+  onDeleteRequest {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateOurLocation {
+  onCreateOurLocation {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateOurLocation {
+  onUpdateOurLocation {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteOurLocation {
+  onDeleteOurLocation {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateService {
+  onCreateService {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateService {
+  onUpdateService {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteService {
+  onDeleteService {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateDashbord {
+  onCreateDashbord {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateDashbord {
+  onUpdateDashbord {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteDashbord {
+  onDeleteDashbord {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

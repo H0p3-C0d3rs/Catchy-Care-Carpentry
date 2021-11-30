@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgggg5"
+    tools:context=".ui.SomeWorkCamera">
+
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="267dp"
+        android:layout_height="216dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="304dp"
+        android:contentDescription="TODO"
+        android:background="@drawable/camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+
+        android:id="@+id/upload"
+        android:layout_width="262dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/upl"
+        android:contentDescription="TODO"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="341dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/krona_one"
+        android:text="move to gallery"
+        android:textColor="@android:color/black"
+        android:transitionName="robot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

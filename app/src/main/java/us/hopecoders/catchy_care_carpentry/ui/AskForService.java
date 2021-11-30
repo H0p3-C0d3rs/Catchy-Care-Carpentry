@@ -2,10 +2,13 @@ package us.hopecoders.catchy_care_carpentry.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -46,9 +49,14 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+import us.hopecoders.catchy_care_carpentry.Not;
 import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.adapters.FurnitureAdapter;
-
+//import software.amazon.awssdk.regions.Region;
+//import software.amazon.awssdk.services.sns.SnsClient;
+//import software.amazon.awssdk.services.sns.model.CreateTopicRequest;
+//import software.amazon.awssdk.services.sns.model.CreateTopicResponse;
+//import software.amazon.awssdk.services.sns.model.SnsException;
 
 public class AskForService extends AppCompatActivity {
 
@@ -141,10 +149,14 @@ public class AskForService extends AppCompatActivity {
                                 Log.i("Furni ================ ", response.getData().getId());
                                 furnuture = response.getData();
                                 saveTheDataInTheCloud();
+
                             },
                             error -> Log.e("MyAmplifyApp", error.toString(), error)
                     );
+                    Not not=new Not();
+                    not.notifications(getApplicationContext());
                 }
+
             } else {
                 handler2();
             }

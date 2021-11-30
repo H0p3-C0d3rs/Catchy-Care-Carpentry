@@ -35,6 +35,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="950dp"
+
             android:background="#E2EAED">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -121,8 +122,7 @@
                             app:srcCompat="@drawable/assembly" />
 
                     </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
+                                <androidx.cardview.widget.CardView
                         android:id="@+id/card3"
                         android:layout_width="200dp"
                         android:layout_height="233dp"
@@ -263,6 +263,8 @@
                             android:layout_margin="10dp"
                             android:contentDescription="@string/app_name"
                             app:srcCompat="@drawable/installation" />
+
+
 
                     </androidx.cardview.widget.CardView>
 
