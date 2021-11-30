@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/WhiteSmoke"
+    android:background="@drawable/profilr_background"
+
     android:scrollbarDefaultDelayBeforeFade="500"
     android:scrollbarFadeDuration="300"
     tools:context=".auth.Profile">
@@ -14,9 +15,9 @@
         android:id="@+id/profilePic"
         android:layout_width="119dp"
         android:layout_height="116dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="64dp"
-        app:circularflow_defaultRadius="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        app:circularflow_defaultRadius="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/circularImage"
@@ -28,43 +29,74 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="72dp"
-        android:textColor="#042C5A"
+        android:textColor="@color/Shuttle_Gray"
         android:textSize="20sp"
+        android:fontFamily="@font/arvo_bold"
         app:layout_constraintStart_toEndOf="@+id/profilePic"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/phoneNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arvo_bold"
+        android:textColor="@color/Shuttle_Gray"        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arvo_bold"
+        android:textColor="@color/Shuttle_Gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/firstAndLastName" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
-        android:layout_width="0dp"
-        android:layout_height="502dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/requests_profile_bg"
+        android:layout_width="355dp"
+        android:layout_height="403dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="50dp"
+
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/common_google_signin_btn_text_light_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePic">
+        app:layout_constraintTop_toBottomOf="@+id/profilePic"
+        app:layout_constraintVertical_bias="0.466">
 
         <TextView
             android:id="@+id/userNameInProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/bangers"
             android:text="My Requests"
             android:textColor="#E2EAED"
-            android:textSize="20sp"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewInProfilePage"
-            android:layout_width="0dp"
-            android:layout_height="310dp"
+            android:layout_width="371dp"
+            android:layout_height="211dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userNameInProfile" />
 
@@ -72,9 +104,9 @@
             android:id="@+id/buttonsContener"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recyclerViewInProfilePage">
 
@@ -83,9 +115,9 @@
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="4dp"
-                android:background="@drawable/void_button_pg"
-                android:text="Add/view cars"
-                android:textColor="@color/yellow"
+                android:background="@drawable/buttonshapewhitebg"
+                android:text="Add/view cards"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -96,13 +128,15 @@
                 android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="50dp"
-                android:background="@drawable/button_background_white"
+                android:background="@drawable/buttonshapewhitebg"
                 android:text="New request"
-                android:textColor="#042C5A"
+                android:textColor="#FAFBFD"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/moveToCar"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -114,7 +148,7 @@
         android:layout_marginTop="-30dp"
         android:layout_marginEnd="-30dp"
         android:text="➕"
-        android:textColor="@color/yellow"
+        android:textColor="@color/Shuttle_Gray"
         app:layout_constraintEnd_toStartOf="@+id/profilePic"
         app:layout_constraintTop_toBottomOf="@+id/profilePic" />
 
@@ -122,9 +156,9 @@
         android:id="@+id/signOutProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/sign_out_bg"
+        android:background="@drawable/buttonshapewhitebg"
         android:drawableRight="@drawable/ic_baseline_login_24"
         android:drawablePadding="5dp"
         android:paddingLeft="10dp"
@@ -136,28 +170,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/phoneNumberText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:textColor="#042C5A"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/profilePic"
-        app:layout_constraintTop_toBottomOf="@+id/emailText" />
-
-    <TextView
-        android:id="@+id/emailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:textColor="#042C5A"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/profilePic"
-        app:layout_constraintTop_toBottomOf="@+id/firstAndLastName" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

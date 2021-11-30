@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@drawable/ic_splash6"
     tools:context=".splash.Splash">
 
@@ -11,6 +12,7 @@
         android:id="@+id/gifImageView3"
         android:layout_width="274dp"
         android:layout_height="121dp"
+
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
