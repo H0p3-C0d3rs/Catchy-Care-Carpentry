@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import us.hopecoders.catchy_care_carpentry.R;
+import us.hopecoders.catchy_care_carpentry.auth.SignIn;
 import us.hopecoders.catchy_care_carpentry.auth.SignUp;
 
 /**
@@ -63,11 +64,18 @@ public class FragmentC extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_c,container,false);
         TextView textView=(TextView)view.findViewById(R.id.finish);
+        TextView textView1=(TextView)view.findViewById(R.id.textView);
+
+        textView1.setOnClickListener(v->{
+            Intent intent = new Intent(getActivity(),SignIn.class);
+            startActivity(intent);
+        });
         textView.setOnClickListener(v->{
-            Intent intent=new Intent(getActivity(), SignUp.class);
+            Intent intent=new Intent(getActivity(), SignIn.class);
             startActivity(intent);
         });
         return view;
     }
+
 
 }
