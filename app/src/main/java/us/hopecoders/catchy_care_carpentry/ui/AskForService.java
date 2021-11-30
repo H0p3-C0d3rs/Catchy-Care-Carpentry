@@ -9,12 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -60,8 +62,8 @@ public class AskForService extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
     EditText serviceDescription, phoneNumber;
-    TextView countryName, cityName, serviceName, addFur;
-    Button shareLocation, submit;
+    TextView countryName, cityName, serviceName;
+    Button shareLocation, submit ,addFur;
     FusedLocationProviderClient fusedLocationProviderClient;
     String countryNameStorage, cityNameStorage;
     Double longitudeStorage, latitudeStorage;
@@ -87,6 +89,10 @@ public class AskForService extends AppCompatActivity {
         shareLocation = findViewById(R.id.shareLocationBtn);
         submit = findViewById(R.id.submitBtn);
         addFur = findViewById(R.id.addFurFromRequest);
+
+        addFur.animate().rotationX(360).setDuration(3000);
+//        submit.animate().alpha(1f).translationYBy(50).setDuration(1500);
+
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(AskForService.this);
         shareLocationListener();
@@ -282,4 +288,6 @@ public class AskForService extends AppCompatActivity {
             }
         });
     }
+
+
 }

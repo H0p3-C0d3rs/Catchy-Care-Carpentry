@@ -54,6 +54,7 @@
                     android:id="@+id/constraintLayout4"
                     android:layout_width="419dp"
                     android:layout_height="246dp"
+                    android:background="@drawable/backg2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -61,18 +62,18 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="437dp"
-                        android:layout_height="93dp"
+                        android:layout_width="344dp"
+                        android:layout_height="65dp"
                         android:layout_marginStart="100dp"
-                        android:layout_marginTop="40dp"
+                        android:layout_marginTop="60dp"
                         android:layout_marginEnd="261dp"
-                        android:fontFamily="@font/archivo_narrow_bold"
+                        android:fontFamily="@font/amaranth"
                         android:text="Catchy Care Carpentry Services"
-                        android:textColor="@color/yellow"
-                        android:textSize="30dp"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.197"
+                        app:layout_constraintHorizontal_bias="0.143"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +102,8 @@
                         android:layout_width="200dp"
                         android:layout_height="233dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
+                        android:alpha="0.9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -111,6 +113,7 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
+
                             android:layout_width="214dp"
                             android:layout_height="205dp"
                             android:layout_gravity="center"
@@ -119,14 +122,14 @@
                             app:srcCompat="@drawable/assembly" />
 
                     </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
+                                <androidx.cardview.widget.CardView
                         android:id="@+id/card3"
                         android:layout_width="200dp"
                         android:layout_height="233dp"
                         android:layout_margin="10dp"
                         android:layout_marginEnd="10dp"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
+                        android:alpha="0.9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -137,6 +140,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/card1">
 
                         <ImageView
+
                             android:layout_width="250dp"
                             android:layout_height="219dp"
                             android:layout_gravity="center"
@@ -152,7 +156,8 @@
                         android:layout_height="233dp"
                         android:layout_margin="10dp"
                         android:layout_marginEnd="9dp"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
+                        android:alpha="0.9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -162,6 +167,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/card2">
 
                         <ImageView
+
                             android:layout_width="223dp"
                             android:layout_height="216dp"
                             android:layout_gravity="center"
@@ -178,7 +184,8 @@
                         android:layout_margin="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="10dp"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
+                        android:alpha="0.9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -190,6 +197,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/card3">
 
                         <ImageView
+
                             android:layout_width="231dp"
                             android:layout_height="227dp"
                             android:layout_gravity="center"
@@ -205,7 +213,8 @@
                         android:layout_height="233dp"
                         android:layout_margin="10dp"
                         android:layout_marginTop="10dp"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
+                        android:alpha="0.9"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -218,6 +227,7 @@
 
 
                         <ImageView
+
                             android:id="@+id/img"
                             android:layout_width="205dp"
                             android:layout_height="204dp"
@@ -229,12 +239,13 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card1"
+                        android:alpha="0.9"
                         android:layout_width="200dp"
                         android:layout_height="233dp"
                         android:layout_margin="10dp"
                         android:layout_marginEnd="10dp"
                         android:forceHasOverlappingRendering="true"
-                        app:cardBackgroundColor="#E2EAED"
+                        app:cardBackgroundColor="#96333333"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp"
                         app:cardMaxElevation="12dp"
@@ -245,12 +256,15 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
+
                             android:layout_width="200dp"
                             android:layout_height="219dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:contentDescription="@string/app_name"
                             app:srcCompat="@drawable/installation" />
+
+
 
                     </androidx.cardview.widget.CardView>
 

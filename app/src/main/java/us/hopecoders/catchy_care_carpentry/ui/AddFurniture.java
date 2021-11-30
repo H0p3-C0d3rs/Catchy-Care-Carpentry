@@ -41,6 +41,7 @@ public class AddFurniture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_furnuture);
 
+
         // // // // // // // // // Get furniture's List // // // // // // // // // // // // // //
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(AddFurniture.this);
         String userId = sharedPreferences.getString("userId", "");

@@ -10,12 +10,15 @@
     <color name="BabyBlue">#FF000000</color>
     <color name="Pink">#A43F49</color>
     <color name="Mystic">#e2eaed</color>
-    <color name="grey">#808080</color>
+    <color name="grey">#999797</color>
     <color name="Shuttle_Gray">#586065</color>
     <color name="Viola">#C97FAB</color>
     <color name="WhiteSmoke">#E2EAED</color>
     <color name="yellow">#FFC107</color>
     <color name="Green_Vogue">#042C5A</color>
+
+    <color name="Red">#CA1E2F</color>
+
 
 
 <!--    new color schema -->
