@@ -17,9 +17,14 @@ package us.hopecoders.catchy_care_carpentry.adapters;
         import androidx.annotation.NonNull;
         import androidx.recyclerview.widget.RecyclerView;
 
+        import com.amplifyframework.api.ApiException;
         import com.amplifyframework.api.graphql.model.ModelMutation;
         import com.amplifyframework.core.Amplify;
+        import com.amplifyframework.core.Consumer;
+        import com.amplifyframework.core.model.Model;
+        import com.amplifyframework.core.model.ModelSchema;
         import com.amplifyframework.datastore.generated.model.Furnuture;
+        import com.amplifyframework.datastore.generated.model.Request;
 
         import org.jetbrains.annotations.NotNull;
 
@@ -27,6 +32,9 @@ package us.hopecoders.catchy_care_carpentry.adapters;
         import java.util.List;
 
         import us.hopecoders.catchy_care_carpentry.R;
+        import us.hopecoders.catchy_care_carpentry.auth.Profile;
+        import us.hopecoders.catchy_care_carpentry.ui.AddFurniture;
+        import us.hopecoders.catchy_care_carpentry.ui.AskForService;
 
 
 public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurViewHolder> {
@@ -39,7 +47,7 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurV
 
     public static class FurViewHolder extends RecyclerView.ViewHolder {
         public Furnuture furnuture;
-
+public Request request;
         View itemView;
 
         public FurViewHolder(@NonNull View itemView) {
@@ -48,17 +56,26 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurV
 
             TextView furDeleteButton =itemView.findViewById(R.id.DeleteButton);
 
+
             furDeleteButton.setOnClickListener((v)->{
-                Amplify.API.mutate(ModelMutation.delete(furnuture),
-                        result -> {
-                            Log.i("MyAmplifyApp", "Todo with id: " + result.getData().getId());
+
+    Log.v("test =========>",furnuture.toString());
+                Amplify.API.mutate(
+                        ModelMutation.delete(furnuture.justId(furnuture.getId())),
+                        re->{
+                            Log.i("MyAmplifyApp", "Todo with id: " + re);
+                            Intent goToProfile = new Intent(itemView.getContext(), AddFurniture.class);
+                            itemView.getContext().startActivity(goToProfile);
+
                         },
-                        error -> {
-                            Log.e("MyAmplifyApp", "Create failed", error);
+                        err->{
+                            Log.e("MyAmplifyApp", "Create failed", err);
+
                         }
                 );
 
             });
+
 
             itemView.setOnClickListener(view -> {
                 itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
@@ -74,6 +91,12 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.FurV
                     }
                 }, 150);
             });
+        }
+
+        public void deleteMeasurement(Furnuture furnuture, Consumer onSuccess, Consumer<ApiException> onFail) {
+
+            Amplify.API.mutate(ModelMutation.delete(furnuture), onSuccess, onFail);
+
         }
     }
 

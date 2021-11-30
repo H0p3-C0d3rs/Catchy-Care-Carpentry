@@ -1,0 +1,52 @@
+
+type Furnuture @model {
+  type: String!
+  id: ID!
+  model: String
+  woodType: String
+  user: User! @connection(name: "userFurnuture")
+
+}
+
+type User @model {
+  id: ID!
+  username: String!
+  image : String
+  firstname: String!
+  lastname: String!
+  phone : String!
+  email : String!
+  request: [Request] @connection(name: "userRequest")
+  furnuture: [Furnuture] @connection(name: "userFurnuture")
+}
+
+type Request @model {
+  id: ID!
+  name : String!
+  description : String
+  phone : String
+  isTaken: Boolean
+  service: Service @connection(name: "requestService")
+  user: User @connection(name: "userRequest")
+  ourLocation : OurLocation @connection
+  furnuture : Furnuture @connection
+}
+
+type OurLocation @model {
+  id: ID!
+  countryName : String!
+  cityName : String!
+  longitude : Float!
+  latitude : Float!
+}
+
+type Service @model {
+  id: ID!
+  name : String!
+  request: [Request] @connection(name: "requestService")
+}
+
+type Dashbord @model {
+  id:ID!
+  imageUrl:String!
+}

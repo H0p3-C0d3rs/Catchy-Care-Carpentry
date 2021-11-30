@@ -30,7 +30,7 @@ public final class Furnuture implements Model {
   private final @ModelField(targetType="String", isRequired = true) String type;
   private final @ModelField(targetType="String") String model;
   private final @ModelField(targetType="String") String woodType;
-  private final @ModelField(targetType="User") @BelongsTo(targetName = "furnutureUserId", type = User.class) User user;
+  private final @ModelField(targetType="User", isRequired = true) @BelongsTo(targetName = "furnutureUserId", type = User.class) User user;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime createdAt;
   private @ModelField(targetType="AWSDateTime", isReadOnly = true) Temporal.DateTime updatedAt;
   public String getId() {
@@ -146,7 +146,12 @@ public final class Furnuture implements Model {
       user);
   }
   public interface TypeStep {
-    BuildStep type(String type);
+    UserStep type(String type);
+  }
+  
+
+  public interface UserStep {
+    BuildStep user(User user);
   }
   
 
@@ -155,16 +160,15 @@ public final class Furnuture implements Model {
     BuildStep id(String id);
     BuildStep model(String model);
     BuildStep woodType(String woodType);
-    BuildStep user(User user);
   }
   
 
-  public static class Builder implements TypeStep, BuildStep {
+  public static class Builder implements TypeStep, UserStep, BuildStep {
     private String id;
     private String type;
+    private User user;
     private String model;
     private String woodType;
-    private User user;
     @Override
      public Furnuture build() {
         String id = this.id != null ? this.id : UUID.randomUUID().toString();
@@ -178,9 +182,16 @@ public final class Furnuture implements Model {
     }
     
     @Override
-     public BuildStep type(String type) {
+     public UserStep type(String type) {
         Objects.requireNonNull(type);
         this.type = type;
+        return this;
+    }
+    
+    @Override
+     public BuildStep user(User user) {
+        Objects.requireNonNull(user);
+        this.user = user;
         return this;
     }
     
@@ -193,12 +204,6 @@ public final class Furnuture implements Model {
     @Override
      public BuildStep woodType(String woodType) {
         this.woodType = woodType;
-        return this;
-    }
-    
-    @Override
-     public BuildStep user(User user) {
-        this.user = user;
         return this;
     }
     
@@ -217,14 +222,19 @@ public final class Furnuture implements Model {
     private CopyOfBuilder(String id, String type, String model, String woodType, User user) {
       super.id(id);
       super.type(type)
+        .user(user)
         .model(model)
-        .woodType(woodType)
-        .user(user);
+        .woodType(woodType);
     }
     
     @Override
      public CopyOfBuilder type(String type) {
       return (CopyOfBuilder) super.type(type);
+    }
+    
+    @Override
+     public CopyOfBuilder user(User user) {
+      return (CopyOfBuilder) super.user(user);
     }
     
     @Override
@@ -235,11 +245,6 @@ public final class Furnuture implements Model {
     @Override
      public CopyOfBuilder woodType(String woodType) {
       return (CopyOfBuilder) super.woodType(woodType);
-    }
-    
-    @Override
-     public CopyOfBuilder user(User user) {
-      return (CopyOfBuilder) super.user(user);
     }
   }
   

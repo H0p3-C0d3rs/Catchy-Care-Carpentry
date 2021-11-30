@@ -1,0 +1,18 @@
+projects:
+  cccapp:
+    schemaPath: app/src/main/graphql/schema.json
+    includes:
+      - ''
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: ''
+        generatedFileName: ''
+        docsFilePath: app/src/main/graphql/com/amazonaws/amplify/generated/graphql
+        region: us-west-2
+        apiId: null
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

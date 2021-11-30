@@ -97,9 +97,9 @@ public class AddFurniture extends AppCompatActivity {
 
         Furnuture fur = Furnuture.builder()
                 .type(furType)
+                .user(user)
                 .model(furModel)
                 .woodType(woodType)
-                .user(user)
                 .build();
 
         Amplify.API.mutate(

@@ -77,13 +77,13 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <!--                    <ImageView-->
-<!--                        android:id="@+id/imageView"-->
-<!--                        android:layout_width="184dp"-->
-<!--                        android:layout_height="158dp"-->
-<!--                        android:layout_marginStart="244dp"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="@+id/textView"-->
-<!--                        app:srcCompat="@drawable/hero" />-->
+                    <!--                        android:id="@+id/imageView"-->
+                    <!--                        android:layout_width="184dp"-->
+                    <!--                        android:layout_height="158dp"-->
+                    <!--                        android:layout_marginStart="244dp"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toTopOf="@+id/textView"-->
+                    <!--                        app:srcCompat="@drawable/hero" />-->
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout

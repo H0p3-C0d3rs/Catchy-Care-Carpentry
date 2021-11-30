@@ -1,6 +1,7 @@
 package us.hopecoders.catchy_care_carpentry.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.window.layout.WindowMetricsCalculator;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowMetrics;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,10 +19,10 @@ import com.amplifyframework.core.Amplify;
 
 import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.ui.Dashboard;
+import us.hopecoders.catchy_care_carpentry.ui.DashboardIntro;
 import us.hopecoders.catchy_care_carpentry.ui.MainScreen;
 
 public class SignIn extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +42,10 @@ public class SignIn extends AppCompatActivity {
                         handler1();
                         System.out.println(username);
                         if (username.getText().toString().equals("severus_snape")){
-                            Intent goToDashBoard = new Intent(SignIn.this, Dashboard.class);
+                            Intent goToDashBoard = new Intent(SignIn.this, DashboardIntro.class);
                             startActivity(goToDashBoard);
-                        } else {
+                        }
+                        else {
                             Intent goToMain = new Intent(SignIn.this, MainScreen.class);
                             startActivity(goToMain);
                         }
@@ -66,7 +69,10 @@ public class SignIn extends AppCompatActivity {
 
     }
 
+/*************************************************************/
 
+
+/*************************************************************/
     public void handler1() {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override

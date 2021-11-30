@@ -45,9 +45,12 @@ public class OurAdapter extends RecyclerView.Adapter<OurAdapter.RequestViewHolde
             TextView textView =itemView.findViewById(R.id.deleteButton);
 
             textView.setOnClickListener((v)->{
-                Amplify.API.mutate(ModelMutation.delete(request),
+                Log.v("test =========>",request.toString());
+
+                Amplify.API.mutate(ModelMutation.delete(request.justId(request.getId())),
                         result -> {
-                            Log.i("MyAmplifyApp", "Todo with id: " + result.getData().getId());
+
+                            Log.i("MyAmplifyApp", "Todo with id: " + result);
                             Intent goToProfile = new Intent(itemView.getContext(), Profile.class);
                             itemView.getContext().startActivity(goToProfile);
                         },
@@ -55,7 +58,6 @@ public class OurAdapter extends RecyclerView.Adapter<OurAdapter.RequestViewHolde
                             Log.e("MyAmplifyApp", "Create failed", error);
                         }
                 );
-
             });
 
             itemView.setOnClickListener(view -> {

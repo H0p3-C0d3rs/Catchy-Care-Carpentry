@@ -42,6 +42,10 @@ public class ContactUs extends AppCompatActivity {
         BottomNavigationItemView homeInMenu = findViewById(R.id.homeInMenu);
         BottomNavigationItemView contactUsInMenu= findViewById(R.id.contactUsInMenu);
         BottomNavigationItemView askForServiceInMenu = findViewById(R.id.askForServiceInMenu);
+        BottomNavigationItemView galleryMenu = findViewById(R.id.gallery);
+        galleryMenu.setOnClickListener((v)->{
+            startActivity(new Intent(getApplicationContext() , Galary.class));
+        });
 
         profileInMenu.setOnClickListener(new View.OnClickListener() {
             @Override

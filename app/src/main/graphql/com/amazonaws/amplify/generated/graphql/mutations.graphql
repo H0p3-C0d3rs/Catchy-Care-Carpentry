@@ -1,0 +1,454 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateFurnuture($input: CreateFurnutureInput!) {
+  createFurnuture(input: $input) {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateFurnuture($input: UpdateFurnutureInput!) {
+  updateFurnuture(input: $input) {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteFurnuture($input: DeleteFurnutureInput!) {
+  deleteFurnuture(input: $input) {
+    type
+    id
+    model
+    woodType
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteUser($input: DeleteUserInput!) {
+  deleteUser(input: $input) {
+    id
+    username
+    image
+    firstname
+    lastname
+    phone
+    email
+    request {
+      nextToken
+      startedAt
+    }
+    furnuture {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateRequest($input: CreateRequestInput!) {
+  createRequest(input: $input) {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateRequest($input: UpdateRequestInput!) {
+  updateRequest(input: $input) {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteRequest($input: DeleteRequestInput!) {
+  deleteRequest(input: $input) {
+    id
+    name
+    description
+    phone
+    isTaken
+    service {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    user {
+      id
+      username
+      image
+      firstname
+      lastname
+      phone
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    ourLocation {
+      id
+      countryName
+      cityName
+      longitude
+      latitude
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    furnuture {
+      type
+      id
+      model
+      woodType
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateOurLocation($input: CreateOurLocationInput!) {
+  createOurLocation(input: $input) {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateOurLocation($input: UpdateOurLocationInput!) {
+  updateOurLocation(input: $input) {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteOurLocation($input: DeleteOurLocationInput!) {
+  deleteOurLocation(input: $input) {
+    id
+    countryName
+    cityName
+    longitude
+    latitude
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateService($input: CreateServiceInput!) {
+  createService(input: $input) {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateService($input: UpdateServiceInput!) {
+  updateService(input: $input) {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteService($input: DeleteServiceInput!) {
+  deleteService(input: $input) {
+    id
+    name
+    request {
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateDashbord($input: CreateDashbordInput!) {
+  createDashbord(input: $input) {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateDashbord($input: UpdateDashbordInput!) {
+  updateDashbord(input: $input) {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteDashbord($input: DeleteDashbordInput!) {
+  deleteDashbord(input: $input) {
+    id
+    imageUrl
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "appName": "cccapp",
+    "roleName": "pinpointLambdaRole488d68ed",
+    "cloudformationPolicyName": "cloudformationPolicy488d68ed",
+    "cloudWatchPolicyName": "cloudWatchPolicy488d68ed",
+    "pinpointPolicyName": "pinpointPolicy488d68ed",
+    "authPolicyName": "pinpoint_amplify_488d68ed",
+    "unauthPolicyName": "pinpoint_amplify_488d68ed",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

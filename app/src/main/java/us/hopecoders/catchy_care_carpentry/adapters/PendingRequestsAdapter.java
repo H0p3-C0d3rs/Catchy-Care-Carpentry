@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,8 +24,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.ui.Dashboard;
+import us.hopecoders.catchy_care_carpentry.ui.Details;
 
 public class PendingRequestsAdapter extends RecyclerView.Adapter<PendingRequestsAdapter.PendingRequestsHolder> {
 
@@ -45,25 +48,69 @@ public class PendingRequestsAdapter extends RecyclerView.Adapter<PendingRequests
             this.itemView = itemView;
 
             TextView UpdateButton = itemView.findViewById(R.id.UpdateButton);
-            UpdateButton.setOnClickListener((v) -> {
-                Amplify.API.query(
-                        ModelQuery.get(Request.class, request.getId()),
-                        response -> {
-                            Log.i("MyAmplifyApp", "UpdateQuery");
-                            Request requestUpdate = response.getData().copyOfBuilder()
-                                    .isTaken(true)
-                                    .build();
-                            Amplify.API.mutate(ModelMutation.update(requestUpdate),
-                                    response1 -> {
-                                        Log.i("MyAmplifyApp", "Updated Todo with id: " + response1.getData().getId());
-                                        handler();
-                                    },
-                                    error -> Log.e("MyAmplifyApp", "Update failed", error)
-                            );
-                        },
-                        error -> Log.e("MyAmplifyApp", "Query failure", error)
-                );
+
+
+                UpdateButton.setOnClickListener((v) -> {
+                    Amplify.API.query(
+                            ModelQuery.get(Request.class, request.getId()),
+                            response -> {
+                                Log.i("MyAmplifyApp", "UpdateQuery");
+                                Request requestUpdate = response.getData().copyOfBuilder()
+                                        .isTaken(true)
+                                        .build();
+
+
+                                Amplify.API.mutate(ModelMutation.update(requestUpdate),
+                                        response1 -> {
+                                            Log.i("MyAmplifyApp", "Updated Todo with id: " + response1.getData().getId());
+                                            handler();
+                                        },
+                                        error -> Log.e("MyAmplifyApp", "Update failed", error)
+                                );
+
+                            },
+                            error -> Log.e("MyAmplifyApp", "Query failure", error)
+                    );
+                });
+
+
+
+
+            itemView.setOnClickListener(view -> {
+                Log.v("tesssssssssssssssssst",request.toString());
+                Intent goToDetails = new Intent(itemView.getContext(), Details.class);
+                try{
+                    goToDetails.putExtra("requestName", request.getName());
+                    goToDetails.putExtra("taken", request.getIsTaken());
+                    goToDetails.putExtra("requestDescription", request.getDescription());
+                    goToDetails.putExtra("phone", request.getPhone());
+                    goToDetails.putExtra("username", request.getUser().getUsername());
+                    goToDetails.putExtra("cityName", request.getOurLocation().getCityName());
+                    goToDetails.putExtra("countryName", request.getOurLocation().getCountryName());
+                    goToDetails.putExtra("lat", request.getOurLocation().getLatitude());
+                    goToDetails.putExtra("lng", request.getOurLocation().getLongitude());
+                    goToDetails.putExtra("woodType", request.getFurnuture().getType());
+                    goToDetails.putExtra("woodModel", request.getFurnuture().getModel());
+                    goToDetails.putExtra("gasoline", request.getFurnuture().getWoodType());
+                    Button btn= itemView.findViewById(R.id.UpdateButton);
+                    btn.setEnabled(true);
+                    itemView.getContext().startActivity(goToDetails);
+
+                }
+                catch(Exception e){
+                    new SweetAlertDialog(itemView.getContext(), SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Oh .. No")
+                            .setContentText("there is missing data ...")
+                            .setConfirmText("OK, Never Mind")
+                            .show();
+                    Button btn= itemView.findViewById(R.id.UpdateButton);
+                    btn.setEnabled(false);
+
+
+
+                }
             });
+
         }
 
         public void handler() {
