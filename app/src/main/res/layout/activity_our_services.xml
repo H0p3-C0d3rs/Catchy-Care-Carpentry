@@ -35,7 +35,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="950dp"
-
             android:background="#E2EAED">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -264,8 +263,6 @@
                             android:layout_margin="10dp"
                             android:contentDescription="@string/app_name"
                             app:srcCompat="@drawable/installation" />
-
-
 
                     </androidx.cardview.widget.CardView>
 

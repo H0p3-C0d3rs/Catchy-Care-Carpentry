@@ -3,9 +3,12 @@ package us.hopecoders.catchy_care_carpentry.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -30,12 +33,16 @@ public class Details extends AppCompatActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+
+
         Intent intent = getIntent();
 
         lat = intent.getExtras().getDouble("lat");
         lng = intent.getExtras().getDouble("lng");
         cityName = intent.getExtras().getString("cityName");
         countryName = intent.getExtras().getString("countryName");
+
+
 
         TextView pendingView = findViewById(R.id.pendingView);
         Boolean taken = intent.getExtras().getBoolean("taken");

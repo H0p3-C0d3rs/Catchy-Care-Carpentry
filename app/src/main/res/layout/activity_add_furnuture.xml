@@ -30,144 +30,168 @@
         android:id="@+id/addFurRecycler"
         android:layout_width="388dp"
         android:layout_height="119dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59">
+        app:layout_constraintVertical_bias="0.191" />
 
-        <EditText
-            android:id="@+id/editTextWoodModel"
-            android:layout_width="125dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ModelTextView" />
+    <LinearLayout
 
-        <TextView
-            android:id="@+id/woodTypeTextView"
+        android:id="@+id/linearLayout2"
+        android:layout_width="394dp"
+        android:layout_height="266dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.85"
+        android:background="@drawable/vie_sign"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingTop="30dp"
+        android:paddingRight="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".78"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Furniture Type"
-            android:textColor="@color/black"
-            android:fontFamily="@font/amaranth"
-            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.59">
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="52dp"
-            app:layout_constraintStart_toEndOf="@+id/editTextWoodModel"
-            app:layout_constraintTop_toBottomOf="@+id/chooseTeamTextView">
+            <EditText
+                android:id="@+id/editTextWoodModel"
+                android:layout_width="125dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ModelTextView" />
 
-            <RadioButton
-                android:id="@+id/Softwoods"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/woodTypeTextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Soft woods"
-                android:textStyle="bold"/>
+                android:fontFamily="@font/amaranth"
+                android:text="Furniture Type"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/Hardwoods"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Hard woods"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextWoodModel"
+                app:layout_constraintTop_toBottomOf="@+id/chooseTeamTextView">
 
-                android:textStyle="bold"/>
+                <RadioButton
+                    android:id="@+id/Softwoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Soft woods"
+                    android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/EngineeredWood"
-                android:layout_width="match_parent"
+                <RadioButton
+                    android:id="@+id/Hardwoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Hard woods"
+
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/EngineeredWood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Engineered Wood"
+
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ModelTextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Engineered Wood"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Quantity"
+                android:textColor="@color/black"
+                android:textSize="18sp"
 
-                android:textStyle="bold" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextWoodType" />
 
-        </RadioGroup>
+            <TextView
+                android:id="@+id/chooseTeamTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/amaranth"
+                android:text="Wood Type"
+                android:textColor="@color/black"
+                android:textStyle="bold"
 
-        <TextView
-            android:id="@+id/ModelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:text="Quantity"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:fontFamily="@font/amaranth"
+                app:layout_constraintStart_toEndOf="@+id/editTextWoodType"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextWoodType" />
+            <EditText
+                android:id="@+id/editTextWoodType"
+                android:layout_width="125dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/woodTypeTextView" />
 
-        <TextView
-            android:id="@+id/chooseTeamTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:text="Wood Type"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="@font/amaranth"
-
-            app:layout_constraintStart_toEndOf="@+id/editTextWoodType"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editTextWoodType"
-            android:layout_width="125dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/woodTypeTextView" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonGoProfile"
         android:layout_width="110dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
         android:background="@drawable/void_button_pg"
         android:text="Profile"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.869" />
 
     <Button
         android:id="@+id/addFur"
         android:layout_width="110dp"
         android:layout_height="50dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/botton_pg"
         android:text="Add"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonGoProfile"
-        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.686" />
 </androidx.constraintlayout.widget.ConstraintLayout>
