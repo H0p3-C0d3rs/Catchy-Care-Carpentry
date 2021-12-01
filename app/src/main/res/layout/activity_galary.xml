@@ -7,7 +7,24 @@
     android:background="@drawable/bgggg6"
     tools:context=".ui.Galary">
 
-
+    <TextView
+        android:id="@+id/signOutDashBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="692dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/teal_700"
+        android:drawableRight="@drawable/ic_baseline_login_24"
+        android:drawablePadding="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="Signout"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
@@ -17,11 +34,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy"
         android:layout_width="match_parent"
-        android:layout_height="621dp"
-        android:layout_marginBottom="4dp"
+        android:layout_height="630dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />

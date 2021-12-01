@@ -91,7 +91,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="198dp"
-            android:alpha="0.6"
+            android:alpha="0.9"
             android:background="@drawable/vie_sign"
             android:orientation="vertical"
             android:paddingLeft="32dp"
@@ -103,16 +103,18 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.81">
 
             <TextView
                 android:id="@+id/description2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="261dp"
                 android:layout_gravity="center"
+                android:fontFamily="@font/gotham"
                 android:text="Built-in wardrobes and wardrobes, hanging and stationary cabinets, shelving, countertops, window sills, wooden partitions and slats, doors, stairs, tables, non-standard interior structures made of wood and metal, kitchens of your dreams with individual design of filling."
+
                 android:textColor="@color/black"
-                android:textSize="24dp"
+                android:textSize="22dp"
                 android:textStyle="italic" />
         </LinearLayout>
 

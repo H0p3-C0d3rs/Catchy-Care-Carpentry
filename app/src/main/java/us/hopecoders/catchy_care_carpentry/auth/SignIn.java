@@ -71,11 +71,6 @@ public class SignIn extends AppCompatActivity {
         });
 
     }
-
-/*************************************************************/
-
-
-/*************************************************************/
     public void handler1() {
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override

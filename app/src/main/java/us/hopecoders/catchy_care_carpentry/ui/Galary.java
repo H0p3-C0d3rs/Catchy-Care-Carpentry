@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
@@ -27,6 +28,7 @@ import java.util.List;
 
 import us.hopecoders.catchy_care_carpentry.R;
 import us.hopecoders.catchy_care_carpentry.adapters.GalaryAdapter;
+import us.hopecoders.catchy_care_carpentry.auth.SignIn;
 
 public class Galary extends AppCompatActivity {
 
@@ -36,6 +38,18 @@ public class Galary extends AppCompatActivity {
         setContentView(R.layout.activity_galary);
         Toolbar toolbar=findViewById(R.id.toolbar);
         toolbar.setTitle("");
+        TextView signOutFromDashBoard = findViewById(R.id.signOutDashBoard);
+        signOutFromDashBoard.setOnClickListener(v -> {
+            Amplify.Auth.signOut(
+                    () -> {
+                        Log.i("AuthQuickstart", "Signed out successfully");
+                        Intent goToSignIn = new Intent(Galary.this, SignIn.class);
+                        startActivity(goToSignIn);
+                        finish();
+                    },
+                    error -> Log.e("AuthQuickstart", error.toString())
+            );
+        });
         ImageView imageView=findViewById(R.id.back);
         imageView.setOnClickListener(v->{
             finish();

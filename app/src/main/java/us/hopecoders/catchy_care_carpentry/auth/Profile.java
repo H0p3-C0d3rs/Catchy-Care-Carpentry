@@ -142,12 +142,21 @@ public class Profile extends AppCompatActivity {
 
 
         TextView moveToCar = findViewById(R.id.moveToCar);
+
+        moveToCar.setAlpha(0f);
+        moveToCar.setTranslationY(50);
+
+        moveToCar.animate().alpha(1f).translationYBy(-50).setDuration(4000);
         moveToCar.setOnClickListener(view -> {
             Intent moveToCarPage = new Intent(Profile.this, AddFurniture.class);
             startActivity(moveToCarPage);
         });
 
         TextView moveToServicePage = findViewById(R.id.moveToServicePage);
+        moveToServicePage.setAlpha(0f);
+        moveToServicePage.setTranslationY(50);
+
+        moveToServicePage.animate().alpha(1f).translationYBy(-50).setDuration(4000);
         moveToServicePage.setOnClickListener(view -> {
             Intent moveToService = new Intent(Profile.this, OurServices.class);
             startActivity(moveToService);

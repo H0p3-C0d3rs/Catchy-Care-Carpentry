@@ -6,7 +6,57 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgggg5"
     tools:context=".ui.SomeWorkCamera">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/dashBoardRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/arvo_bold"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back"
+            />
+        <TextView
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:fontFamily="@font/arvo_bold"
+            android:text="Gallery"
+
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:onClick="signout"
+        android:id="@+id/signOutDashBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/teal_700"
+        android:drawableRight="@drawable/ic_baseline_login_24"
+        android:drawablePadding="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="Signout"
+        android:textColor="@color/WhiteSmoke"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/camera"
@@ -33,7 +83,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/move_to_gallery"
         android:layout_width="341dp"
         android:layout_height="56dp"
         android:layout_centerInParent="true"
@@ -41,6 +91,24 @@
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/krona_one"
         android:text="move to gallery"
+        android:textColor="@android:color/black"
+        android:transitionName="robot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="341dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/krona_one"
+        android:visibility="invisible"
+        android:text="Save"
+        android:enabled="true"
         android:textColor="@android:color/black"
         android:transitionName="robot"
         app:layout_constraintBottom_toBottomOf="parent"

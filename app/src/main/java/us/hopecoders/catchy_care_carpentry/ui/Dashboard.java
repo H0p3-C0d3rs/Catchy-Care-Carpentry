@@ -18,6 +18,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelQuery;
@@ -41,6 +42,10 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        ImageView imageView=findViewById(R.id.back);
+        imageView.setOnClickListener(v->{
+            finish();
+        });
         RecyclerView dashBoardRecycler = findViewById(R.id.dashBoardRecycler);
         Handler handler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
             @Override

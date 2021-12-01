@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amplifyframework.api.graphql.model.ModelMutation;
@@ -43,29 +44,49 @@ import java.util.Date;
 import java.util.Locale;
 
 import us.hopecoders.catchy_care_carpentry.R;
+import us.hopecoders.catchy_care_carpentry.auth.SignIn;
 
 import static us.hopecoders.catchy_care_carpentry.ui.OurWork.RESULT;
 
 public class SomeWorkCamera extends AppCompatActivity {
     private String imageURL;
     private Button save;
+    private Button move_to_galary;
     public static final String HAHA = "uploadResult";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_some_work_camera);
+
+        TextView signOutFromDashBoard = findViewById(R.id.signOutDashBoard);
+        signOutFromDashBoard.setOnClickListener(v -> {
+            Amplify.Auth.signOut(
+                    () -> {
+                        Log.i("AuthQuickstart", "Signed out successfully");
+                        Intent goToSignIn = new Intent(SomeWorkCamera.this, SignIn.class);
+                        startActivity(goToSignIn);
+                        finish();
+                    },
+                    error -> Log.e("AuthQuickstart", error.toString())
+            );
+        });
+        ImageView imageView=findViewById(R.id.back);
+        imageView.setOnClickListener(v->{
+            finish();
+        });
         ImageButton camera = findViewById(R.id.camera);
         camera.setOnClickListener(view -> {
             cameraActivityResultLauncher.launch(new Intent(SomeWorkCamera.this, OurWork.class));
 
         });
-        save = findViewById(R.id.btn_save);
-        save.setOnClickListener(view -> {
-            ourWork(imageURL);
+        move_to_galary = findViewById(R.id.move_to_gallery);
+        move_to_galary.setOnClickListener(view -> {
+
             Intent i=new Intent(getApplicationContext(),Galary.class);
             startActivity(i);
         });
+
         ImageButton addPhoto = findViewById(R.id.upload);
         addPhoto.setOnClickListener(view -> {
             Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
@@ -114,19 +135,27 @@ public class SomeWorkCamera extends AppCompatActivity {
             });
 
     private void getObservationImageURL(String key) {
-
         Amplify.Storage.getUrl(key, success -> {
             imageURL = success.getUrl().toString();
             Log.i("TAG", "Image URL ====================> " + imageURL);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    save.setEnabled(true);
+                    save = findViewById(R.id.btn_save);
+                    save.setVisibility(View.VISIBLE);
+                    save.setOnClickListener(view -> {
+                        ourWork(imageURL);
+                        Intent i=new Intent(getApplicationContext(),Galary.class);
+                        startActivity(i);
+                    });
                 }
             });
+
+
         }, error -> {
             Log.e("TAG", "Error getting URL ====================> " + error.toString());
         });
+
     }
     @SuppressLint("LongLogTag")
     @Override
@@ -192,5 +221,17 @@ imgName=imgName+".JPEG";
     public void ll(View view) {
         Intent i=new Intent(getApplicationContext(),Galary.class);
         startActivity(i);
+    }
+
+    public void signout(View view) {
+        Amplify.Auth.signOut(
+                () -> {
+                    Log.i("AuthQuickstart", "Signed out successfully");
+                    Intent goToSignIn = new Intent(SomeWorkCamera.this, SignIn.class);
+                    startActivity(goToSignIn);
+                    finish();
+                },
+                error -> Log.e("AuthQuickstart", error.toString())
+        );
     }
 }
